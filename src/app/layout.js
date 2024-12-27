@@ -39,18 +39,22 @@ export default function RootLayout({ children }) {
           type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
         />
-         <link
+        <link
           href="https://fonts.googleapis.com/css2?family=Saira:wght@400;700&display=swap"
           rel="stylesheet"
         />
-      
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
-<link href="https://cdn.jsdelivr.net/gh/flaticon-icons/flaticon-icons@1.0.0/styles.min.css" rel="stylesheet" />
 
+        <link
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+          rel="stylesheet"
+        />
+        <link
+          href="https://cdn.jsdelivr.net/gh/flaticon-icons/flaticon-icons@1.0.0/styles.min.css"
+          rel="stylesheet"
+        />
       </Head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
-      
       </body>
     </html>
   );
