@@ -25,6 +25,7 @@ import NewsletterSection from "@/Component/NewsletterSection";
 import Footer from "@/Component/Footer";
 import Placeholder from "@/Component/Placeholder"
 import ScrollTopBtn from "@/Component/ScrollTopBtn";
+import WhyUS from "@/Component/WhyUS";
 // import ScrollTopBtn from "@/Component/ScrollTopBtn";
 
 // Custom arrow components
@@ -204,6 +205,8 @@ const Home = () => {
     </Row>
   </Container>
 </section>
+{/* //// why us ====>  */}
+<WhyUS />
 {/* //// over gols section ====>  */}
 <section className="statements-section centred buradon">
   <div className="auto-container">
