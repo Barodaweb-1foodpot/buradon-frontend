@@ -1,7 +1,9 @@
+"use client";
+
 import Bradcrum from "@/Component/Bradcrum";
 import Footer from "@/Component/Footer";
 import Hader from "@/Component/Hader";
-import React from "react";
+import React, { useEffect, useState } from 'react'
 import BradCrumBanner from "@/assets/images/new-home/breadcrumb.jpg";
 import Placeholder from "@/Component/Placeholder";
 import Image from "next/image";
@@ -12,16 +14,22 @@ import delivery from "@/assets/images/new-home/delivery.jpg"
 import Packing from "@/assets/images/new-home/packaging.jpg"
 import Insurance from "@/assets/images/new-home/insurance.jpg"
 import ScrollTopBtn from "@/Component/ScrollTopBtn";
-
+import axios from 'axios';
 
 const Page = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(()=>{
+      axios.get(`${process.env.NEXT_PUBLIC_API_URL_COFFEE}/api/auth/get/blogsList/GeneralInformation`)
+      .then((res)=>setData(res.data))
+  },[])
+
   return (
     <React.Fragment>
       <Hader />
       <Placeholder />
       <Bradcrum BradCrumProduct={BradCrumBanner} Title="General Information" />
-      <section className="locations-section sec-pad centred buradon">
-        {/* <div class="pattern-layer" style="background-image: url(assets/images/shape/shape-10.png);"></div> */}
+      {/* <section className="locations-section sec-pad centred buradon">
         <div className="auto-container">
           <div className="sec-title">
             <h2>
@@ -118,16 +126,13 @@ const Page = () => {
                   <h3>Packing</h3>
                   <ul className="list-item clearfix packing-list">
                     <li>
-                      <i className="flaticon-check-mark" />
-                      Lab products for your experiments
+                      <p>Lab products for your experiments</p>
                     </li>
                     <li>
-                      <i className="flaticon-check-mark" />
-                      Because we think beyond your boundaries
+                      <p>Because we think beyond your boundaries</p>
                     </li>
                     <li>
-                      <i className="flaticon-check-mark" />
-                      Where science meets innovation
+                      <p>Where science meets innovation</p>
                     </li>
                   </ul>
                 </div>
@@ -151,7 +156,10 @@ const Page = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+      {data.length > 0 && data.map((it)=>
+          <div dangerouslySetInnerHTML={{ __html: it.blogDesc }}></div>
+        )}
      <ScrollTopBtn />
       <Footer />
     </React.Fragment>

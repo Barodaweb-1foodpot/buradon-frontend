@@ -1,6 +1,8 @@
+"use client";
+
 import Bradcrum from '@/Component/Bradcrum'
 import Hader from '@/Component/Hader'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import BradCrumContactImg from "../../assets/images/new-home/breadcrumb.jpg"
 import { IoLocationOutline } from "react-icons/io5";
 import { RiMailSendLine } from "react-icons/ri";
@@ -10,14 +12,22 @@ import Placeholder from "../../Component/Placeholder"
 
 import Footer from '@/Component/Footer'
 import ScrollTopBtn from '@/Component/ScrollTopBtn';
+import axios from 'axios';
 
 const Page = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(()=>{
+      axios.get(`${process.env.NEXT_PUBLIC_API_URL_COFFEE}/api/auth/get/blogsList/ContactUs`)
+      .then((res)=>setData(res.data))
+  },[])
+
   return (
     <React.Fragment>
         <Hader />
         <Placeholder />
         <Bradcrum BradCrumProduct={BradCrumContactImg} Title="Contact Us" />
-    <section className="contact-info-section buradon">
+    {/* <section className="contact-info-section buradon">
   <div className="auto-container">
     <div className="lower-box">
       <div className="row clearfix">
@@ -53,7 +63,10 @@ const Page = () => {
       </div>
     </div>
   </div>
-</section>
+</section> */}
+      {data.length > 0 && data.map((it)=>
+          <div dangerouslySetInnerHTML={{ __html: it.blogDesc }}></div>
+        )}
 <ScrollTopBtn />
 <Footer />
 

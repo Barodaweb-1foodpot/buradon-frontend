@@ -72,25 +72,25 @@ const Hader = () => {
                 <nav className="main-menu navbar-expand-md navbar-light">
                   <ul className="navigation clearfix">
                     <li className="current">
-                      <a href="/">Home</a>
+                      <Link href="/">Home</Link>
                     </li>
                     <li>
-                      <a href="/AboutUs">Profile</a>
+                      <Link href="/AboutUs">Profile</Link>
                     </li>
                     <li>
                       <Link href="/ProductList">Products</Link>
                     </li>
                     <li>
-                      <a href="/Certificat">Certification</a>
+                      <Link href="/Certificate">Certification</Link>
                     </li>
                     <li>
-                      <a href="/GenrallInformation">General Information</a>
+                      <Link href="/GeneralInformation">General Information</Link>
                     </li>
                     <li>
-                      <a href="/ContactUs">Contact Us</a>
+                      <Link href="/ContactUs">Contact Us</Link>
                     </li>
                     <li>
-                      <a href="/GetQote">Get A Quote</a>
+                      <Link href="/GetQote">Get A Quote</Link>
                     </li>
                   </ul>
                 </nav>
