@@ -8,7 +8,7 @@ import ScrollTopBtn from '@/Component/ScrollTopBtn';
 import BradCrumImg from "@/assets/images/new-home/breadcrumb-product.jpg"
 
 
-const productList = () => {
+const Page = () => {
   return (
     <React.Fragment>
       <Hader />
@@ -197,4 +197,4 @@ const productList = () => {
   )
 }
 
-export default productList
+export default Page

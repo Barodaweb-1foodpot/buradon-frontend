@@ -104,22 +104,22 @@ const Footer = () => {
                   <div className="widget-content">
                     <ul className="links-list clearfix">
                       <li>
-                        <a href="#">Profile</a>
+                        <a href="/AboutUs">Profile</a>
                       </li>
                       <li>
-                        <a href="#">Products</a>
+                        <a href="/ProductList">Products</a>
                       </li>
                       <li>
-                        <a href="#">Certification</a>
+                        <a href="/Certificat">Certification</a>
                       </li>
                       <li>
-                        <a href="#">General Information</a>
+                        <a href="/GenrallInformation">General Information</a>
                       </li>
                       <li>
-                        <a href="#">Contact Us</a>
+                        <a href="/ContactUs">Contact Us</a>
                       </li>
                       <li>
-                        <a href="#">Get A Quote</a>
+                        <a href="/GetQote">Get A Quote</a>
                       </li>
                     </ul>
                   </div>

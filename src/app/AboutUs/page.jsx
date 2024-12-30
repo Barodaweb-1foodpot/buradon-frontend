@@ -11,7 +11,7 @@ import OverGol from '@/Component/OverGol'
 import AboutTwo from "@/assets/images/new-home/about-2.png"
 import Image from 'next/image'
 
-const AboutUs = () => {
+const Page = () => {
   return (
     <React.Fragment>
         <Hader />
@@ -64,4 +64,4 @@ const AboutUs = () => {
   )
 }
 
-export default AboutUs
+export default Page
