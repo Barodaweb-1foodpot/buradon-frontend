@@ -10,7 +10,7 @@ import { Col, Row } from "react-bootstrap";
 import Image from "next/image";
 import { GiCheckMark } from "react-icons/gi";
 
-const AboutUs = () => {
+const AboutUsComponent = () => {
   return (
     <React.Fragment>
       <section className="about-style-three sec-pad">
@@ -113,4 +113,4 @@ const AboutUs = () => {
   );
 };
 
-export default AboutUs;
+export default AboutUsComponent;

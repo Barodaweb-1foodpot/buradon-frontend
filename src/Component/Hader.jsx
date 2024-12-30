@@ -1,9 +1,12 @@
+"use client";
+
 import React, { useEffect } from "react";
 import Logo from "../assets/images/new-home/buradon-logo.png";
 import Image from "next/image";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { FaFacebook, FaTwitterSquare, FaYoutube } from "react-icons/fa";
 import { BiSolidPhoneCall } from "react-icons/bi";
+import Link from "next/link";
 
 const Hader = () => {
   // Sticky functionality
@@ -75,7 +78,7 @@ const Hader = () => {
                       <a href="#">Profile</a>
                     </li>
                     <li>
-                      <a href="#">Products</a>
+                      <Link href="/page/productList">Products</Link>
                     </li>
                     <li>
                       <a href="#">Certification</a>
