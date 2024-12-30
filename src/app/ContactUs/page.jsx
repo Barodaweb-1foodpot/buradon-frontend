@@ -9,8 +9,9 @@ import { PiPhoneCallBold } from "react-icons/pi";
 import Placeholder from "../../Component/Placeholder"
 
 import Footer from '@/Component/Footer'
+import ScrollTopBtn from '@/Component/ScrollTopBtn';
 
-const ContactUs = () => {
+const Page = () => {
   return (
     <React.Fragment>
         <Hader />
@@ -53,10 +54,11 @@ const ContactUs = () => {
     </div>
   </div>
 </section>
+<ScrollTopBtn />
 <Footer />
 
     </React.Fragment>
   )
 }
 
-export default ContactUs
+export default Page
