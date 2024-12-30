@@ -1,5 +1,7 @@
+"use client";
+
 import Hader from "@/Component/Hader";
-import React from "react";
+import React, { useState } from "react";
 import PlaceHolder from "@/Component/Placeholder";
 import Bradcrum from "@/Component/Bradcrum";
 import BannerImg from "@/assets/images/new-home/breadcrumb.jpg";
@@ -9,11 +11,35 @@ import { FaUserCircle,FaPen } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { IoCall } from "react-icons/io5";
 import { LiaTextWidthSolid } from "react-icons/lia";
+import axios from "axios";
 
 
 
 
 const Page = () => {
+  const [detail, setDetail] = useState({
+    firstName : "",
+    email : "",
+    contact : "",
+    subject : "",
+    message : ""
+  })
+
+  const handleChange=(e)=>{
+    setDetail({
+      ...detail,
+      [e.target.name] : e.target.value
+    })
+  }
+
+  const handleSend=()=>{
+    if(detail.firstName !== "" && detail.email !== "" && detail.contact !== "" && detail.subject !== "" && detail.message !== "")
+      {
+        console.log("sachin",detail)
+        axios.post(`${process.env.NEXT_PUBLIC_API_URL_COFFEE}/api/auth/Inquiry`,detail)
+        .then((res)=>console.log(res))
+      }
+  }
   return (
     <React.Fragment>
       <Hader />
@@ -38,24 +64,28 @@ const Page = () => {
                         <i> <FaUserCircle className="fa-solid fa-circle-user" /> </i>
                         <input
                           type="text"
-                          name="username"
+                          name="firstName"
                           placeholder="xxxxxx"
                           required
+                          onChange={handleChange}
+                          value={detail.firstName}
                         />
                       </div>
                       <div className="col-lg-6 col-md-6 col-sm-12 form-group">
                         <label>Email</label>
                        <i> <IoMdMail className="fa-solid fa-envelope" /></i> 
-                        <input type="email" name="email" required />
+                        <input type="email" name="email" required onChange={handleChange} value={detail.email}/>
                       </div>
                       <div className="col-lg-6 col-md-6 col-sm-12 form-group">
                         <label>Ph Num</label>
                         <i><IoCall className="fa-solid fa-phone-flip" /></i> 
                         <input
                           type="text"
-                          name="phone"
+                          name="contact"
                           required
                           placeholder="Phone"
+                          onChange={handleChange}
+                          value={detail.contact}
                         />
                       </div>
                       <div className="col-lg-6 col-md-6 col-sm-12 form-group">
@@ -63,21 +93,24 @@ const Page = () => {
                         <i><FaPen className="fa-solid fa-pencil" /></i>
                         <input
                           type="text"
-                          name="phone"
+                          name="subject"
                           required
                           placeholder="Subject"
+                          onChange={handleChange}
+                          value={detail.subject}
                         />
                       </div>
                       <div className="col-lg-12 col-md-12 col-sm-12 form-group">
                         <label>Message</label>
                         <i><LiaTextWidthSolid className="fa-sharp fa-solid fa-text-width" /></i>
-                        <textarea name="message" defaultValue={""} />
+                        <textarea name="message" defaultValue={""} required onChange={handleChange} value={detail.message}/>
                       </div>
                       <div className="col-lg-12 col-md-12 col-sm-12 form-group message-btn">
                         <button
                           type="submit"
                           className="theme-btn"
                           name="submit-form"
+                          onClick={handleSend}
                         >
                           Send Message
                         </button>

@@ -1,5 +1,7 @@
+"use client";
+
 import Hader from "@/Component/Hader";
-import React from "react";
+import React, { useEffect, useState } from 'react'
 import Placeholder from "@/Component/Placeholder";
 import Bradcrum from "@/Component/Bradcrum";
 import CertificatBanner from "@/assets/images/new-home/breadcrumb.jpg";
@@ -11,8 +13,16 @@ import cetificate4 from "@/assets/images/new-home/certificates/4.jpg";
 import Image from "next/image";
 import { Row } from "react-bootstrap";
 import ScrollTopBtn from "@/Component/ScrollTopBtn";
+import axios from 'axios';
 
 const Page = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(()=>{
+      axios.get(`${process.env.NEXT_PUBLIC_API_URL_COFFEE}/api/auth/get/blogsList/Certificate`)
+      .then((res)=>setData(res.data))
+  },[])
+
     const certificatesData =[
         {
             img:cetificate1 ,
@@ -41,7 +51,7 @@ const Page = () => {
       <Hader />
       <Placeholder />
       <Bradcrum BradCrumProduct={CertificatBanner} Title="Certificates" />
-      <section className="team-section sec-pad certificate-buradon">
+      {/* <section className="team-section sec-pad certificate-buradon">
         <div className="auto-container">
           <div className="sec-title centred">
             <h2>
@@ -73,7 +83,10 @@ const Page = () => {
             
           </Row>
         </div>
-      </section>
+      </section> */}
+      {data.length > 0 && data.map((it)=>
+          <div dangerouslySetInnerHTML={{ __html: it.blogDesc }}></div>
+        )}
   <ScrollTopBtn />
       <Footer />
     </React.Fragment>
