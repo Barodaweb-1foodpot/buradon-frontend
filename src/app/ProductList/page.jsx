@@ -54,7 +54,7 @@ const Page = () => {
         </ul>
       </div>
       <div className="items-container row clearfix">
-        <div className="col-lg-12 col-md-6 col-sm-12 masonry-item small-column all">
+        <div className="col-lg-12 col-md-12 col-sm-12 masonry-item small-column all">
           <div className="container table-responsive"> 
             <table className="table table-bordered table-hover buradon-prod-table">
               <thead className="thead-dark">
@@ -67,8 +67,8 @@ const Page = () => {
                 </tr>
               </thead>
               <tbody>
-                {data.length > 0 && data.map((it)=>
-                <tr>
+                {data.length > 0 && data.map((it,tabledata)=>
+                <tr key={tabledata}>
                   <td scope="row">{it.code}</td>
                   <td>{it.productName}</td>
                   <td>{it.CasNo}</td>

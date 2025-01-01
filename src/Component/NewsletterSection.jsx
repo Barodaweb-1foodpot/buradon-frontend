@@ -11,7 +11,7 @@ const NewsletterSection = () => {
         <div className="auto-container">
           <div className="inner-container">
             <Row className=" align-items-center clearfix">
-              <Col lg={3} md={12} sm={12} >
+              <Col lg={3} md={4} xs={4} >
                 <div className="image">
                   <Image
                     src={Indian}
@@ -20,14 +20,14 @@ const NewsletterSection = () => {
                   />
                 </div>
               </Col>
-              <Col lg={6} md={12} sm={12} >
+              <Col lg={6} md={4} xs={4} >
                 <div className="text text-center">
                   <h2>
                     Our Associate <span>Companies</span>
                   </h2>
                 </div>
               </Col>
-              <Col lg={3} md={12}  sm={12} >
+              <Col lg={3} md={4}  xs={4} >
                 <div className="image">
                   <Image
                     src={CaterCamical}
