@@ -84,8 +84,8 @@ const Page = () => {
           </Row>
         </div>
       </section> */}
-      {data.length > 0 && data.map((it)=>
-          <div dangerouslySetInnerHTML={{ __html: it.blogDesc }}></div>
+      {data.length > 0 && data.map((it,certificate)=>
+          <div key={certificate} dangerouslySetInnerHTML={{ __html: it.blogDesc }}></div>
         )}
   <ScrollTopBtn />
       <Footer />

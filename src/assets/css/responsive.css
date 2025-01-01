@@ -104,7 +104,13 @@
   .main-header.style-one .outer-container:before{
     display: none !important;
   }
-
+  .team-block-one .inner-box .lower-content h3{
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .chooseus-block-one .inner-box h3{
+    font-size: 19px;
+  }
   .menu-area .mobile-nav-toggler {
     display: block;
     padding: 10px;
@@ -151,10 +157,7 @@
     padding: 0px;
   }
 
-  .processing-block-one .inner-box .shape,
-  .chooseus-section .bg-layer{
-    display: none;
-  }
+ 
 
   .newsletter-section .inner-container:before,
   .newsletter-section .inner-container .icon{
@@ -222,6 +225,7 @@
     visibility:hidden;
     opacity:0;
   }
+
 }
 
 
@@ -231,6 +235,9 @@
   .header-top .top-inner{
     display: block;
     text-align: center;
+  }
+  .buradon .location-block-one .inner-box{
+    min-height: 337px;
   }
 
   .header-top .top-right{
@@ -867,11 +874,17 @@
   .testing-section .p-tabs-content .content-box{
     padding: 70px 30px;
   }
-
+  .processing-block-one .inner-box .shape,
+  .chooseus-section .bg-layer{
+    display: none;
+  }
   .testing-section .p-tabs-content .content-box{
     min-height: 500px;
   }
-
+.newsletter-section .text h2{
+  font-size: 12px;
+  line-height: 20px;
+}
   .testing-section .p-tabs-content .content-box .inner-box{
     position: relative;
     z-index: 1;

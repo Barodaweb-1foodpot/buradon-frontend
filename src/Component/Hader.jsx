@@ -12,6 +12,7 @@ import { TbCertificate } from "react-icons/tb";
 import { MdContactPage } from "react-icons/md";
 import { RiContactsFill } from "react-icons/ri";
 import { HiInformationCircle } from "react-icons/hi";
+import { usePathname } from "next/navigation";
 
 
 
@@ -30,7 +31,7 @@ const Hader = () => {
         : header.classList.remove("is-sticky");
     }
   };
-
+  const pathname = usePathname()
   useEffect(() => {
     window.addEventListener("scroll", isSticky);
     return () => {
@@ -88,28 +89,30 @@ const Hader = () => {
 
                 <nav className="main-menu navbar-expand-md navbar-light">
                   <ul className="navigation clearfix">
-                    <li className="current">
-                      <Link href="/">Home</Link>
+                    <li >
+                      {/* <Link href="/">Home</Link> */}
+                      <Link className={`${pathname === '/' ? 'active' : ''}`} href="/"> Home </Link>
                     </li>
                     <li>
-                      <Link href="/AboutUs">Profile</Link>
+                      {/* <Link href="/AboutUs">Profile</Link> */}
+                      <Link className={`${pathname === '/AboutUs' ? 'active' : ''}`} href="/AboutUs"> Profile </Link>
                     </li>
                     <li>
-                      <Link href="/ProductList">Products</Link>
+                      <Link className={`${pathname === '/ProductList' ? 'active' : ''}`} href="/ProductList">Products</Link>
                     </li>
                     <li>
-                      <Link href="/Certificate">Certification</Link>
+                      <Link className={`${pathname === '/Certificate' ? 'active' : ''}`} href="/Certificate">Certification</Link>
                     </li>
                     <li>
-                      <Link href="/GeneralInformation">
+                      <Link className={`${pathname === '/GeneralInformation' ? 'active' : ''}`} href="/GeneralInformation">
                         General Information
                       </Link>
                     </li>
                     <li>
-                      <Link href="/ContactUs">Contact Us</Link>
+                      <Link className={`${pathname === '/ContactUs' ? 'active' : ''}`} href="/ContactUs">Contact Us</Link>
                     </li>
                     <li>
-                      <Link href="/GetQote">Get A Quote</Link>
+                      <Link className={`${pathname === '/GetQote' ? 'active' : ''}`} href="/GetQote">Get A Quote</Link>
                     </li>
                   </ul>
                 </nav>
@@ -203,25 +206,25 @@ const Hader = () => {
           <Offcanvas.Body>
             <div>
               <div className="mobilHader">
-                <Link href="/"> <FaHome className="mobilHaderIcon" /> Home</Link>
+                <Link className={`${pathname === '/' ? 'active' : ''}`} href="/"> <FaHome className="mobilHaderIcon" /> Home</Link>
               </div>
               <div className="mobilHader">
-                <Link href="/AboutUs"><FaUserCircle className="mobilHaderIcon" />Profile</Link>
+                <Link  className={`${pathname === '/AboutUs' ? 'active' : ''}`} href="/AboutUs"><FaUserCircle className="mobilHaderIcon" />Profile</Link>
               </div>
               <div className="mobilHader">
-                <Link href="/ProductList"><FaBox className="mobilHaderIcon" />Products</Link>
+                <Link className={`${pathname === '/ProductList' ? 'active' : ''}`} href="/ProductList"><FaBox className="mobilHaderIcon" />Products</Link>
               </div>
               <div className="mobilHader">
-                <Link href="/Certificate"><TbCertificate className="mobilHaderIcon" />Certification</Link>
+                <Link className={`${pathname === '/Certificate' ? 'active' : ''}`} href="/Certificate"><TbCertificate className="mobilHaderIcon" />Certification</Link>
               </div>
               <div className="mobilHader">
-                <Link href="/GeneralInformation"><HiInformationCircle className="mobilHaderIcon" />General Information</Link>
+                <Link className={`${pathname === '/GeneralInformation' ? 'active' : ''}`} href="/GeneralInformation"><HiInformationCircle className="mobilHaderIcon" />General Information</Link>
               </div>
               <div className="mobilHader">
-                <Link href="/ContactUs"><MdContactPage className="mobilHaderIcon" />Contact Us</Link>
+                <Link className={`${pathname === '/ContactUs' ? 'active' : ''}`} href="/ContactUs"><MdContactPage className="mobilHaderIcon" />Contact Us</Link>
               </div>
               <div className="mobilHader">
-                <Link href="/GetQote"><RiContactsFill className="mobilHaderIcon" />Get A Quote</Link>
+                <Link className={`${pathname === '/GetQote' ? 'active' : ''}`} href="/GetQote"><RiContactsFill className="mobilHaderIcon" />Get A Quote</Link>
               </div>
             </div>
             <div>

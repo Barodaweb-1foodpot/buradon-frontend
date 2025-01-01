@@ -972,6 +972,7 @@ span.hightlight-blue {
   position: relative;
   display: flex;
   align-items: center;
+  margin-bottom: 0px;
 }
 
 .main-header .menu-right-content li {
@@ -7412,7 +7413,7 @@ div#mCSB_1_container {
   top: 6px;
   width: 48px;
   height: 42px;
-  line-height: 35px;
+  line-height: 38px;
   text-align: center;
   font-size: 20px;
   color: #fff;
@@ -7595,6 +7596,7 @@ div#mCSB_1_container {
   position: relative;
   display: inline-block;
   margin-right: 15px;
+
 }
 
 .header-style-three .nav-right .social-links li:last-child {
@@ -7612,6 +7614,8 @@ div#mCSB_1_container {
 }
 
 .header-style-three .nav-right .social-links {
+  padding: 21px 0px;
+  margin-bottom: 0px;
   position: relative;
   /* margin-right: 40px; */
 }
@@ -7622,10 +7626,13 @@ div#mCSB_1_container {
   background: #dadce0;
   width: 1px;
   height: 30px;
-  top: 3px;
+  top: 24px;
   right: -21px;
 }
 
+.active{
+  color: #f48632 !important
+}
 .header-style-three .menu-right-content li.support-box .icon-box {
 }
 

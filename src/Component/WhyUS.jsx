@@ -6,6 +6,7 @@ import Image from "next/image";
 import NabalLogo from "../assets/images/new-home/nabl-logo.png"
 import Quality from "../assets/images/new-home/quality.png"
 import Inhouse from "../assets/images/new-home/inhouse.png"
+import { Row } from "react-bootstrap";
 const WhyUS = () => {
   return (
     <React.Fragment>
@@ -35,12 +36,13 @@ const WhyUS = () => {
                 excellence.
               </p>
             </div>
-            <div className="col-lg-3 col-md-6 col-sm-12 chooseus-block">
+            {/* <div className="col-lg-3 col-md-6 col-sm-12 chooseus-block">
               <div className="chooseus-block-one"></div>
             </div>
             <div className="col-lg-3 col-md-6 col-sm-12 chooseus-block">
               <div className="chooseus-block-one"></div>
-            </div>
+            </div> */}
+            <Row>
             <div className="col-lg-3 col-md-6 col-sm-12 chooseus-block">
               <div className="chooseus-block-one">
                 <div className="inner-box">
@@ -105,6 +107,7 @@ const WhyUS = () => {
                 </div>
               </div>
             </div>
+            </Row>
           </div>
         </div>
       </section>
