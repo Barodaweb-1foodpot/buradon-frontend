@@ -108,12 +108,15 @@ const Home = () => {
                       initial={{ opacity: 0, y: 50 }} // Initial state: hidden and moved down
                       animate={{ opacity: 1, y: 0 }} // Final state: visible and in normal position
                       transition={{ duration: 1 }} // Duration of animation
+                      className="bannerTitle"
                     >
                       {d.title} <br />
                       <motion.span
                         initial={{ opacity: 0 }} // Span starts hidden
                         animate={{ opacity: 1 }} // Span fades in
                         transition={{ duration: 1, delay: 0.5 }} // Add delay for staggered effect
+                      className="bannerTitle"
+
                       >
                         {d.subTitle}
                       </motion.span>
@@ -129,7 +132,7 @@ const Home = () => {
   <div className="auto-container">
     <div className="inner-container">
       <Row className=" clearfix">
-        <Col lg={3} md={6} sm={12} className=" chooseus-block">
+        <Col  md={6} sm={12} className=" col-lg chooseus-block">
           <div className="chooseus-block-one">
             <div className="inner-box">
               <div className="shape" style={{backgroundImage: `url(${Shape21.src})`}}>
@@ -140,7 +143,7 @@ const Home = () => {
             </div>
           </div>
         </Col>
-        <Col lg={3} md={6} sm={12} className=" chooseus-block">
+        <Col  md={6} sm={12} className=" col-lg chooseus-block">
           <div className="chooseus-block-one">
             <div className="inner-box">
               <div className="shape" style={{backgroundImage: `url(${Shape21.src})`}}>
@@ -151,7 +154,7 @@ const Home = () => {
             </div>
           </div>
         </Col>
-        <Col lg={3} md={6} sm={12} className=" chooseus-block">
+        <Col  md={6} sm={12} className=" col-lg chooseus-block">
           <div className="chooseus-block-one">
             <div className="inner-box">
               <div className="shape" style={{backgroundImage: `url(${Shape21.src})`}}>
@@ -163,7 +166,7 @@ const Home = () => {
             </div>
           </div>
         </Col>
-        <Col lg={3} md={6} sm={12} className=" chooseus-block">
+        <Col  md={6} sm={12} className=" col-lg chooseus-block">
           <div className="chooseus-block-one">
             <div className="inner-box">
               <div className="shape" style={{backgroundImage: `url(${Shape21.src})`}}>

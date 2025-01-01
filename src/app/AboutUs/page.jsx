@@ -28,8 +28,8 @@ const Page = () => {
         <Bradcrum BradCrumProduct={BradcrumAboutImg} Title="Profile" />
         <AboutUsComponent />
         
-        {data.length > 0 && data.map((it)=>
-          <div dangerouslySetInnerHTML={{ __html: it.blogDesc }}></div>
+        {data.length > 0 && data.map((it,index)=>
+          <div key={index} dangerouslySetInnerHTML={{ __html: it.blogDesc }}></div>
         )}
         <ScrollTopBtn />
         <Footer />

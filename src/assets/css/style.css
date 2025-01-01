@@ -359,10 +359,13 @@ h6 {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .handle-preloader .animation-preloader .spinner {
     height: 8em;
     width: 8em;
+  }
+  .banner-style-three .banner-carousel.banner-buradon .slide-item{
+    padding: 25px 0 180px !important; 
   }
 }
 @media screen and (max-width: 500px) {
@@ -370,10 +373,21 @@ h6 {
     height: 7em;
     width: 7em;
   }
+  .slick-prev, .slick-next{
+    display: none !important;
+  }
   .handle-preloader .animation-preloader .txt-loading .letters-loading {
     font-size: 40px;
     letter-spacing: 10px;
   }
+  .banner-carousel .content-box h2, .sec-title h2 {
+    /* font-size: 15px !important; */
+    line-height: 30px !important;
+}
+.bannerTitle{
+  font-size: 15px !important;
+}
+
 }
 
 .centred {
@@ -5850,10 +5864,52 @@ div#mCSB_1_container {
   display: inline-block;
   color: #1c2a4d;
 }
-
-.team-block-one .inner-box .lower-content h3 a:hover {
+.slick-prev:before, .slick-next:before {
+  color: #16436f !important;
+}
+.canvas-content {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ddd;
 }
 
+.canvas-links a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+  padding: 10px 0;
+}
+.mobileHeadar{
+  background-color: #1c2a4d;
+}
+.mobileHeadar .close-btn svg{
+  fill: #fff !important;
+}
+.mobileLogo{
+  width: 150px;
+}
+.offcanvas-header{
+  border-bottom: 1px solid #ccc;
+}
+.mobilHader{
+  padding: 10px;
+}
+.socialIcon{
+  display: flex;
+  gap: 20px;
+}
+.contact-info h4 {
+  padding-left: 10px;
+}
+.contact-info ul{
+  list-style: none;
+  padding-left: 10px;
+}
+.team-block-one .inner-box .lower-content h3 a:hover {
+}
+.mobilHaderIcon{
+  margin-right: 10px;
+}
 .team-block-one .inner-box .lower-content .designation {
   position: relative;
   display: block;
