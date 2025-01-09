@@ -69,7 +69,7 @@ const Hader = () => {
                     <HiOutlineLocationMarker className="flaticon-map" />
                   </div>
                   <h6>
-                    Open Hours <br /> Mon to Sat: 10.00 AM to 6.00 PM
+                    Open Hours <br /> Mon to Sat:  9.00 AM to 6.00 PM
                   </h6>
                 </div>
               </div>
@@ -230,7 +230,7 @@ const Hader = () => {
               </div>
             </div>
             <div>
-              <div className="contact-info">
+              <div className="contact-info contactInfoMobile">
                 <h4>Contact Info</h4>
                 <ul>
                   <li>

@@ -134,7 +134,7 @@ const Home = () => {
       <Row className=" clearfix">
         <Col  md={6} sm={12} className=" col-lg chooseus-block">
           <div className="chooseus-block-one">
-            <div className="inner-box">
+            <div className="inner-box homeInner-box">
               <div className="shape" style={{backgroundImage: `url(${Shape21.src})`}}>
               </div>
               <div className="icon-box"><GiCheckMark className="flaticon-check-mark" /></div>
@@ -145,7 +145,7 @@ const Home = () => {
         </Col>
         <Col  md={6} sm={12} className=" col-lg chooseus-block">
           <div className="chooseus-block-one">
-            <div className="inner-box">
+            <div className="inner-box homeInner-box">
               <div className="shape" style={{backgroundImage: `url(${Shape21.src})`}}>
               </div>
               <div className="icon-box"><GiCheckMark className="flaticon-check-mark" /></div>
@@ -156,7 +156,7 @@ const Home = () => {
         </Col>
         <Col  md={6} sm={12} className=" col-lg chooseus-block">
           <div className="chooseus-block-one">
-            <div className="inner-box">
+            <div className="inner-box homeInner-box">
               <div className="shape" style={{backgroundImage: `url(${Shape21.src})`}}>
                 {/* <img src="assets/images/shape/shape-21.png" alt /> */}
               </div>
@@ -168,7 +168,7 @@ const Home = () => {
         </Col>
         <Col  md={6} sm={12} className=" col-lg chooseus-block">
           <div className="chooseus-block-one">
-            <div className="inner-box">
+            <div className="inner-box homeInner-box">
               <div className="shape" style={{backgroundImage: `url(${Shape21.src})`}}>
               </div>
               <div className="icon-box"><GiCheckMark className="flaticon-check-mark" /></div>
@@ -201,7 +201,7 @@ const Home = () => {
         <p className="text">Buradon, established in 2001, is a leading Indian manufacturer and exporter of fine chemicals, meeting GR, AR, EL, ACS, and LR standards. Renowned for quality and reliability, we deliver exceptional products worldwide with a commitment to excellence and competitive pricing.
         </p>
         <div className="text-center">
-          <a href="product.html" className="theme-btn buradon mt-5">Explore Products</a>
+          <a href="/ProductList" className="theme-btn buradon mt-5">Explore Products</a>
         </div>
       </Col>
     </Row>
