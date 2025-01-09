@@ -13,6 +13,7 @@ import { MdContactPage } from "react-icons/md";
 import { RiContactsFill } from "react-icons/ri";
 import { HiInformationCircle } from "react-icons/hi";
 import { usePathname } from "next/navigation";
+ 
 
 
 
@@ -68,7 +69,7 @@ const Hader = () => {
                     <HiOutlineLocationMarker className="flaticon-map" />
                   </div>
                   <h6>
-                    Open Hours <br /> Mon to Sat: 10.00 AM to 6.00 PM
+                    Open Hours <br /> Mon to Sat:  9.00 AM to 6.00 PM
                   </h6>
                 </div>
               </div>
@@ -109,11 +110,12 @@ const Hader = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link className={`${pathname === '/ContactUs' ? 'active' : ''}`} href="/ContactUs">Contact Us</Link>
+                      <Link className={`${pathname === '/Career' ? 'active' : ''}`} href="/Career">Career</Link>
                     </li>
                     <li>
-                      <Link className={`${pathname === '/GetQote' ? 'active' : ''}`} href="/GetQote">Get A Quote</Link>
+                      <Link className={`${pathname === '/ContactUs' ? 'active' : ''}`} href="/ContactUs">Contact Us</Link>
                     </li>
+                   
                   </ul>
                 </nav>
               </div>
@@ -228,7 +230,7 @@ const Hader = () => {
               </div>
             </div>
             <div>
-              <div className="contact-info">
+              <div className="contact-info contactInfoMobile">
                 <h4>Contact Info</h4>
                 <ul>
                   <li>

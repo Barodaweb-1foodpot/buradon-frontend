@@ -5,7 +5,7 @@ import thumb2 from "../assets/images/resource/thumb-2.jpg";
 import thumb3 from "../assets/images/resource/thumb-3.jpg";
 import thumb4 from "../assets/images/new-home/thumb-4.jpg";
 import AboutSec from "../assets/images/new-home/about-sec.jpg";
-import IsoNew from "../assets/images/new-home/iso-new.png"
+import IsoNew from "../assets/images/new-home/iso-new.png";
 import { Col, Row } from "react-bootstrap";
 import Image from "next/image";
 import { GiCheckMark } from "react-icons/gi";
@@ -58,25 +58,31 @@ const AboutUsComponent = () => {
                 </div>
                 <div className="text">
                   <p>
-                    A progressive and dynamic company, Buradon is one of India
-                    's leading manufacture and exporter of fine chemicals to the
-                    rigid standard of GR , AR , EL, ACS, and LR grades due to
-                    its industrial exposure, commitment and market fixing
-                    capabilities from India . We produce a continuously
-                    expanding line of chemicals which has achieved a reputation
-                    for quality standing in international markets.{" "}
+                    Buradon, established in 2001, is a leading manufacturer and
+                    exporter of fine chemicals in India. Known for our
+                    commitment to quality, we adhere to strict LR , AR and ACS
+                    grade standards. Our ever-expanding range of chemicals has
+                    earned a strong reputation in domestic and international
+                    markets.
                   </p>
                 </div>
                 <div className="text">
                   <p>
-                    Established in the year 2001, with a mission to simply serve
-                    the customers' every need by offering quality products and
-                    prompt service. With a simple marketing strategy "to supply
-                    best quality products in the minimum possible price", we
-                    supply only to established and reliable suppliers all over
-                    the world. Buradon has traveled on the rising graph of
-                    Growth V/S Time. <a className="ps-2" href="#">Read More ...</a>
-
+                    With a mission to meet customer needs through high-quality
+                    products and prompt service, we follow a simple marketing
+                    strategy: "Deliver the best quality at the lowest possible
+                    price." We work exclusively with trusted and reliable
+                    suppliers worldwide, ensuring consistent quality and
+                    satisfaction. Over the years, Buradon has achieved steady
+                    growth and continues to thrive in the global chemical
+                    industry.{" "}
+                    <a
+                      className="ps-2"
+                      style={{ color: "#0d6efd" }}
+                      href="/AboutUs"
+                    >
+                      Read More ...
+                    </a>
                   </p>
                 </div>
                 <div className="lower-box">
@@ -88,7 +94,7 @@ const AboutUsComponent = () => {
                     {/* <h5>ISO 14001:2015</h5>
                                   <h5>ISO 45001:2018</h5> */}
                     <h5>ISO Certified</h5>
-                    <GiCheckMark  className=" checkIcon flaticon-check-mark" />
+                    <GiCheckMark className=" checkIcon flaticon-check-mark" />
                   </div>
                 </div>
 
