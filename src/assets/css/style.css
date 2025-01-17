@@ -9207,6 +9207,7 @@ div#mCSB_1_container {
 
 .footer-bottom-three .bottom-inner .copyright p {
   color: var(--light-blue);
+  margin-bottom: 0px;
 }
 
 .footer-bottom-three .bottom-inner .copyright a:hover {
