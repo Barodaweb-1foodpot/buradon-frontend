@@ -1,21 +1,27 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
-import Logo from "../assets/images/new-home/buradon-logo.png";
+import { css } from "@emotion/css";
 import Image from "next/image";
-import { HiOutlineLocationMarker } from "react-icons/hi";
-import { FaBox, FaFacebook, FaHome, FaTwitter, FaTwitterSquare, FaUserCircle, FaYoutube,FaRegClock  } from "react-icons/fa";
-import { BiSolidPhoneCall } from "react-icons/bi";
-import Offcanvas from "react-bootstrap/Offcanvas";
 import Link from "next/link";
-import { TbCertificate } from "react-icons/tb";
+import { usePathname } from "next/navigation";
+import React, { useEffect, useState } from "react";
+import Offcanvas from "react-bootstrap/Offcanvas";
+import { BiSolidPhoneCall } from "react-icons/bi";
+import {
+  FaBox,
+  FaFacebook,
+  FaHome,
+  FaRegClock,
+  FaTwitter,
+  FaTwitterSquare,
+  FaUserCircle,
+  FaYoutube,
+} from "react-icons/fa";
+import { HiInformationCircle, HiOutlineLocationMarker } from "react-icons/hi";
 import { MdContactPage } from "react-icons/md";
 import { RiContactsFill } from "react-icons/ri";
-import { HiInformationCircle } from "react-icons/hi";
-import { usePathname } from "next/navigation";
- 
-
-
+import { TbCertificate } from "react-icons/tb";
+import Logo from "../assets/images/new-home/buradon-logo.png";
 
 const Hader = () => {
   const [show, setShow] = useState(false);
@@ -32,7 +38,7 @@ const Hader = () => {
         : header.classList.remove("is-sticky");
     }
   };
-  const pathname = usePathname()
+  const pathname = usePathname();
   useEffect(() => {
     window.addEventListener("scroll", isSticky);
     return () => {
@@ -60,16 +66,16 @@ const Hader = () => {
                     <HiOutlineLocationMarker className="flaticon-map" />
                   </div>
                   <h6>
-                  Block No: 429, Umraya-391440 
-                    <br /> Taluka: Padra  Vadodara Gujarat
+                    Block No: 429, Umraya-391440
+                    <br /> Taluka: Padra Vadodara Gujarat
                   </h6>
                 </div>
                 <div className="info-box">
                   <div className="icon-box">
-                    <FaRegClock  className="flaticon-map" />
+                    <FaRegClock className="flaticon-map" />
                   </div>
                   <h6>
-                    Open Hours <br /> Mon to Sat:  9.00 AM to 6.00 PM
+                    Open Hours <br /> Mon to Sat: 9.00 AM to 6.00 PM
                   </h6>
                 </div>
               </div>
@@ -90,32 +96,74 @@ const Hader = () => {
 
                 <nav className="main-menu navbar-expand-md navbar-light">
                   <ul className="navigation clearfix">
-                    <li >
+                    <li>
                       {/* <Link href="/">Home</Link> */}
-                      <Link className={`${pathname === '/' ? 'active' : ''}`} href="/"> Home </Link>
+                      <Link
+                        className={`${pathname === "/" ? "active" : ""}`}
+                        href="/"
+                      >
+                        {" "}
+                        Home{" "}
+                      </Link>
                     </li>
                     <li>
                       {/* <Link href="/AboutUs">Profile</Link> */}
-                      <Link className={`${pathname === '/AboutUs' ? 'active' : ''}`} href="/AboutUs"> Profile </Link>
+                      <Link
+                        className={`${pathname === "/AboutUs" ? "active" : ""}`}
+                        href="/AboutUs"
+                      >
+                        {" "}
+                        Profile{" "}
+                      </Link>
                     </li>
                     <li>
-                      <Link className={`${pathname === '/ProductList' ? 'active' : ''}`} href="/ProductList">Products</Link>
+                      <Link
+                        className={`${
+                          pathname === "/ProductList" ? "active" : ""
+                        }`}
+                        href="/ProductList"
+                      >
+                        Products
+                      </Link>
                     </li>
                     <li>
-                      <Link className={`${pathname === '/Certificate' ? 'active' : ''}`} href="/Certificate">Certification</Link>
+                      <Link
+                        className={`${
+                          pathname === "/Certificate" ? "active" : ""
+                        }`}
+                        href="/Certificate"
+                      >
+                        Certification
+                      </Link>
                     </li>
                     <li>
-                      <Link className={`${pathname === '/GeneralInformation' ? 'active' : ''}`} href="/GeneralInformation">
+                      <Link
+                        className={`${
+                          pathname === "/GeneralInformation" ? "active" : ""
+                        }`}
+                        href="/GeneralInformation"
+                      >
                         General Information
                       </Link>
                     </li>
                     <li>
-                      <Link className={`${pathname === '/Career' ? 'active' : ''}`} href="/Career">Career</Link>
+                      <Link
+                        className={`${pathname === "/Career" ? "active" : ""}`}
+                        href="/Career"
+                      >
+                        Career
+                      </Link>
                     </li>
                     <li>
-                      <Link className={`${pathname === '/ContactUs' ? 'active' : ''}`} href="/ContactUs">Contact Us</Link>
+                      <Link
+                        className={`${
+                          pathname === "/ContactUs" ? "active" : ""
+                        }`}
+                        href="/ContactUs"
+                      >
+                        Contact Us
+                      </Link>
                     </li>
-                   
                   </ul>
                 </nav>
               </div>
@@ -137,7 +185,15 @@ const Hader = () => {
                     </a>
                   </li>
                 </ul>
-                <ul className="menu-right-content">
+                <ul
+                  className={
+                    "menu-right-content" +
+                    " " +
+                    css`
+                      padding-left: 2rem;
+                    `
+                  }
+                >
                   <li className="support-box">
                     <div className="icon-box">
                       <BiSolidPhoneCall />
@@ -175,7 +231,15 @@ const Hader = () => {
                     </a>
                   </li>
                 </ul>
-                <ul className="menu-right-content">
+                <ul
+                  className={
+                    "menu-right-content" +
+                    " " +
+                    css`
+                      padding-left: 2rem;
+                    `
+                  }
+                >
                   <li className="support-box">
                     <div className="icon-box">
                       <BiSolidPhoneCall />
@@ -208,25 +272,69 @@ const Hader = () => {
           <Offcanvas.Body>
             <div>
               <div className="mobilHader">
-                <Link className={`${pathname === '/' ? 'active' : ''}`} href="/"> <FaHome className="mobilHaderIcon" /> Home</Link>
+                <Link
+                  className={`${pathname === "/" ? "active" : ""}`}
+                  href="/"
+                >
+                  {" "}
+                  <FaHome className="mobilHaderIcon" /> Home
+                </Link>
               </div>
               <div className="mobilHader">
-                <Link  className={`${pathname === '/AboutUs' ? 'active' : ''}`} href="/AboutUs"><FaUserCircle className="mobilHaderIcon" />Profile</Link>
+                <Link
+                  className={`${pathname === "/AboutUs" ? "active" : ""}`}
+                  href="/AboutUs"
+                >
+                  <FaUserCircle className="mobilHaderIcon" />
+                  Profile
+                </Link>
               </div>
               <div className="mobilHader">
-                <Link className={`${pathname === '/ProductList' ? 'active' : ''}`} href="/ProductList"><FaBox className="mobilHaderIcon" />Products</Link>
+                <Link
+                  className={`${pathname === "/ProductList" ? "active" : ""}`}
+                  href="/ProductList"
+                >
+                  <FaBox className="mobilHaderIcon" />
+                  Products
+                </Link>
               </div>
               <div className="mobilHader">
-                <Link className={`${pathname === '/Certificate' ? 'active' : ''}`} href="/Certificate"><TbCertificate className="mobilHaderIcon" />Certification</Link>
+                <Link
+                  className={`${pathname === "/Certificate" ? "active" : ""}`}
+                  href="/Certificate"
+                >
+                  <TbCertificate className="mobilHaderIcon" />
+                  Certification
+                </Link>
               </div>
               <div className="mobilHader">
-                <Link className={`${pathname === '/GeneralInformation' ? 'active' : ''}`} href="/GeneralInformation"><HiInformationCircle className="mobilHaderIcon" />General Information</Link>
+                <Link
+                  className={`${
+                    pathname === "/GeneralInformation" ? "active" : ""
+                  }`}
+                  href="/GeneralInformation"
+                >
+                  <HiInformationCircle className="mobilHaderIcon" />
+                  General Information
+                </Link>
               </div>
               <div className="mobilHader">
-                <Link className={`${pathname === '/ContactUs' ? 'active' : ''}`} href="/ContactUs"><MdContactPage className="mobilHaderIcon" />Contact Us</Link>
+                <Link
+                  className={`${pathname === "/ContactUs" ? "active" : ""}`}
+                  href="/ContactUs"
+                >
+                  <MdContactPage className="mobilHaderIcon" />
+                  Contact Us
+                </Link>
               </div>
               <div className="mobilHader">
-                <Link className={`${pathname === '/GetQote' ? 'active' : ''}`} href="/GetQote"><RiContactsFill className="mobilHaderIcon" />Get A Quote</Link>
+                <Link
+                  className={`${pathname === "/GetQote" ? "active" : ""}`}
+                  href="/GetQote"
+                >
+                  <RiContactsFill className="mobilHaderIcon" />
+                  Get A Quote
+                </Link>
               </div>
             </div>
             <div>
