@@ -1008,12 +1008,13 @@ span.hightlight-blue {
 
 .main-header .menu-right-content li.support-box {
   position: relative;
-  display: block;
-  padding-left: 35px;
+  display: flex;
+  /* padding-left: 15px; */
+  gap: 15px;
 }
 
 .main-header .menu-right-content li.support-box .icon-box {
-  position: absolute;
+  position: relative;
   left: 0px;
   top: 0px;
   font-size: 20px;
