@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import Logo from "../assets/images/new-home/buradon-logo.png";
 import Image from "next/image";
 import { HiOutlineLocationMarker } from "react-icons/hi";
-import { FaBox, FaFacebook, FaHome, FaTwitter, FaTwitterSquare, FaUserCircle, FaYoutube } from "react-icons/fa";
+import { FaBox, FaFacebook, FaHome, FaTwitter, FaTwitterSquare, FaUserCircle, FaYoutube,FaRegClock  } from "react-icons/fa";
 import { BiSolidPhoneCall } from "react-icons/bi";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Link from "next/link";
@@ -60,13 +60,13 @@ const Hader = () => {
                     <HiOutlineLocationMarker className="flaticon-map" />
                   </div>
                   <h6>
-                    Village: Umraya-391440
-                    <br /> Taluka: Padra
+                  Block No: 429, Umraya-391440 
+                    <br /> Taluka: Padra  Vadodara Gujarat
                   </h6>
                 </div>
                 <div className="info-box">
                   <div className="icon-box">
-                    <HiOutlineLocationMarker className="flaticon-map" />
+                    <FaRegClock  className="flaticon-map" />
                   </div>
                   <h6>
                     Open Hours <br /> Mon to Sat:  9.00 AM to 6.00 PM

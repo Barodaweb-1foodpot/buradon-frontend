@@ -59,7 +59,7 @@ const Page = () => {
             <table className="table table-bordered table-hover buradon-prod-table">
               <thead className="thead-dark">
                 <tr>
-                  <th scope="col">Code</th>
+                  {/* <th scope="col">Code</th> */}
                   <th scope="col">Name</th>
                   <th scope="col">CAS No.</th>
                   <th scope="col">AR / ACS</th>
@@ -67,21 +67,42 @@ const Page = () => {
                 </tr>
               </thead>
               <tbody>
-                {data.length > 0 && data.map((it,tabledata)=>
-                <tr key={tabledata}>
-                  <td scope="row">{it.code}</td>
-                  <td>{it.productName}</td>
-                  <td>{it.CasNo}</td>
-                  <td className="pdf"><div className="pdf-icon"> <a href={`${process.env.NEXT_PUBLIC_API_URL_COFFEE}/${it.AR}`} target='_blank'><BiSolidFilePdf className="fas fa-file-pdf" /> View</a></div></td>
-                  <td className="pdf"><div className="pdf-icon"> <a href={`${process.env.NEXT_PUBLIC_API_URL_COFFEE}/${it.LR}`} target='_blank'><BiSolidFilePdf className="fas fa-file-pdf" /> View</a></div></td>
-                </tr>
-                )}
-                {data.length == 0 && 
-                <tr>
-                  <td colSpan={5} style={{textAlign:"center"}}>Data Not Available</td>
-                </tr>
-                }
-              </tbody>
+  {data.length > 0 ? (
+    data.map((item, index) => (
+      <tr key={index}>
+        <td>{item.productName}</td>
+        <td>{item.CasNo}</td>
+        <td className="pdf">
+          {item.AR ? (
+            <div className="pdf-icon">
+              <a href={`${process.env.NEXT_PUBLIC_API_URL_COFFEE}/${item.AR}`} target="_blank" rel="noopener noreferrer">
+                <BiSolidFilePdf className="fas fa-file-pdf" /> View
+              </a>
+            </div>
+          ) : (
+            'N/A'
+          )}
+        </td>
+        <td className="pdf">
+          {item.LR ? (
+            <div className="pdf-icon">
+              <a href={`${process.env.NEXT_PUBLIC_API_URL_COFFEE}/${item.LR}`} target="_blank" rel="noopener noreferrer">
+                <BiSolidFilePdf className="fas fa-file-pdf" /> View
+              </a>
+            </div>
+          ) : (
+            'N/A'
+          )}
+        </td>
+      </tr>
+    ))
+  ) : (
+    <tr>
+      <td colSpan={4} style={{ textAlign: 'center' }}>Data Not Available</td>
+    </tr>
+  )}
+</tbody>
+
             </table>
           </div>
         </div>

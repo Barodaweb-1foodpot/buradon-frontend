@@ -2,6 +2,7 @@ import React from "react";
 import { Col, Row } from "react-bootstrap";
 import Indian from "../assets/images/new-home/indiana.jpg"
 import CaterCamical from "../assets/images/new-home/cater-chemicals.jpg"
+import assocaites from "@/assets/images/new-home/assocaites.jpg"
 import Image from "next/image";
 
 const NewsletterSection = () => {
@@ -9,7 +10,7 @@ const NewsletterSection = () => {
     <React.Fragment>
       <section className="newsletter-section buradon">
         <div className="auto-container">
-          <div className="inner-container">
+          <div className="inner-container" style={{backgroundImage: `url(${assocaites.src})` }}>
             <Row className=" align-items-center clearfix">
               <Col lg={3} md={4} xs={4} >
                 <div className="image">

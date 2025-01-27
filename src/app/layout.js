@@ -1,26 +1,25 @@
-import { Geist, Geist_Mono } from "next/font/google";
-import Head from "next/head";
-import "../assets/css/style.css";
-import "../assets/css/color.css";
-import "../assets/css/animate.css";
-import "../assets/css/flaticon.css";
+// import { Geist, Geist_Mono } from "next/font/google";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "slick-carousel/slick/slick.css";
+import Head from "next/head";
 import "slick-carousel/slick/slick-theme.css";
-import "../assets/css/responsive.css";
+import "slick-carousel/slick/slick.css";
+import "../assets/css/animate.css";
+import "../assets/css/color.css";
 import "../assets/css/flaticon.css";
+import "../assets/css/responsive.css";
+import "../assets/css/style.css";
 import "./globals.css";
 
 // Load fonts using Next.js font optimization
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"], // Subset to use
-});
+// const geistSans = Geist({
+//   variable: "--font-geist-sans",
+//   subsets: ["latin"], // Subset to use
+// });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"], // Subset to use
-});
+// const geistMono = Geist_Mono({
+//   variable: "--font-geist-mono",
+//   subsets: ["latin"], // Subset to use
+// });
 
 export const metadata = {
   title: "Buradon Inc",
@@ -41,9 +40,7 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </Head>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

@@ -42,7 +42,7 @@ const WhyUS = () => {
             <div className="col-lg-3 col-md-6 col-sm-12 chooseus-block">
               <div className="chooseus-block-one"></div>
             </div> */}
-            <Row>
+            {/* <Row>
               <div className="col-lg-3 col-md-6 col-sm-12 chooseus-block">
                 <div className="chooseus-block-one">
                   <div className="inner-box">
@@ -53,7 +53,7 @@ const WhyUS = () => {
                     <div className="icon-box">
                       <Image src={Iso} alt="logo" />
                     </div>
-                    {/* <span>We Are</span> */}
+                    
                     <h3>
                       ISO <br /> Certified
                     </h3>
@@ -70,7 +70,7 @@ const WhyUS = () => {
                     <div className="icon-box">
                       <Image src={NabalLogo} alt="logo" />
                     </div>
-                    {/* <span>We provide</span> */}
+                   
                     <h3>NABL Accredited Testing Lab</h3>
                   </div>
                 </div>
@@ -85,7 +85,7 @@ const WhyUS = () => {
                     <div className="icon-box">
                       <Image src={Quality} alt="logo" />
                     </div>
-                    {/* <span>We provide</span> */}
+                    
                     <h3>
                       Highest <br /> Purity
                     </h3>
@@ -102,12 +102,12 @@ const WhyUS = () => {
                     <div className="icon-box">
                       <Image src={Inhouse} alt="logo" />
                     </div>
-                    {/* <span>We provide</span> */}
+              
                     <h3>Integrated Manufacturing System</h3>
                   </div>
                 </div>
               </div>
-            </Row>
+            </Row> */}
           </div>
         </div>
       </section>
