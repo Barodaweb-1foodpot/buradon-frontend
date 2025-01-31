@@ -21,6 +21,7 @@ const Page = () => {
   useEffect(()=>{
       axios.get(`${process.env.NEXT_PUBLIC_API_URL_COFFEE}/api/auth/get/blogsList/Certificate`)
       .then((res)=>setData(res.data))
+      .catch((err)=>console.log("Error",err))
   },[])
 
     const certificatesData =[

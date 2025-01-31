@@ -22,11 +22,13 @@ const Page = () => {
   const getAllData=()=>{
     axios.get(`${process.env.NEXT_PUBLIC_API_URL_COFFEE}/api/auth/list/product-details`)
     .then((res)=>setData(res.data))
+    .catch((err)=>console.log("Error",err))
   }
 
   const getFilteredData=(id)=>{
     axios.get(`${process.env.NEXT_PUBLIC_API_URL_COFFEE}/api/auth/list/filter-product-details/${id}`)
     .then((res)=>setData(res.data))
+    .catch((err)=>console.log("Error",err))
   }
 
   return (

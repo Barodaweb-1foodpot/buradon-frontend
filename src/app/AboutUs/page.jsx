@@ -25,7 +25,8 @@ const Page = () => {
       .get(
         `${process.env.NEXT_PUBLIC_API_URL_COFFEE}/api/auth/get/blogsList/AboutUs`
       )
-      .then((res) => setData(res.data));
+      .then((res) => setData(res.data))
+      .catch((err)=>console.log("Error",err))
   }, []);
   return (
     <React.Fragment>
