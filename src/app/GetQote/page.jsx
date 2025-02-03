@@ -38,6 +38,7 @@ const Page = () => {
         console.log("sachin",detail)
         axios.post(`${process.env.NEXT_PUBLIC_API_URL_COFFEE}/api/auth/Inquiry`,detail)
         .then((res)=>console.log(res))
+        .catch((err)=>console.log("Error",err))
       }
   }
   return (
