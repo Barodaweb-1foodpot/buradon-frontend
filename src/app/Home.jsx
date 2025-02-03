@@ -17,7 +17,6 @@ import Image from "next/image";
 import { Col, Container, Fade, Row } from "react-bootstrap";
 import Loaction from "@/Component/Loaction";
 import Counter from "@/Component/Counter";
-
 import NewsletterSection from "@/Component/NewsletterSection";
 import Footer from "@/Component/Footer";
 import Placeholder from "@/Component/Placeholder"
@@ -25,9 +24,15 @@ import ScrollTopBtn from "@/Component/ScrollTopBtn";
 import WhyUS from "@/Component/WhyUS";
 import AboutUsComponent from "@/Component/AboutUs";
 import OverGol from "@/Component/OverGol";
+
 // import ScrollTopBtn from "@/Component/ScrollTopBtn";
 
 // Custom arrow components
+
+export const metadata= {
+  title: "Home Page",
+};
+
 const PrevArrow = (props) => {
   const { onClick } = props;
   return (
@@ -45,6 +50,7 @@ const NextArrow = (props) => {
     </button>
   );
 };
+ 
 
 const Home = () => {
   const banerData = [
@@ -80,6 +86,7 @@ const Home = () => {
 
   return (
     <React.Fragment>
+       
       <Hader />
       <Placeholder />
       {/* Banner section with slick slider */}
@@ -132,7 +139,7 @@ const Home = () => {
   <div className="auto-container">
     <div className="inner-container">
       <Row className=" clearfix">
-        <Col  md={6} sm={12} className=" col-lg chooseus-block">
+        <Col  md={6} xs={6} className=" col-lg chooseus-block">
           <div className="chooseus-block-one">
             <div className="inner-box homeInner-box">
               <div className="shape" style={{backgroundImage: `url(${Shape21.src})`}}>
@@ -143,7 +150,7 @@ const Home = () => {
             </div>
           </div>
         </Col>
-        <Col  md={6} sm={12} className=" col-lg chooseus-block">
+        <Col  md={6} xs={6} className=" col-lg chooseus-block">
           <div className="chooseus-block-one">
             <div className="inner-box homeInner-box">
               <div className="shape" style={{backgroundImage: `url(${Shape21.src})`}}>
@@ -154,7 +161,7 @@ const Home = () => {
             </div>
           </div>
         </Col>
-        <Col  md={6} sm={12} className=" col-lg chooseus-block">
+        <Col  md={6} xs={6} className=" col-lg chooseus-block">
           <div className="chooseus-block-one">
             <div className="inner-box homeInner-box">
               <div className="shape" style={{backgroundImage: `url(${Shape21.src})`}}>
@@ -166,7 +173,7 @@ const Home = () => {
             </div>
           </div>
         </Col>
-        <Col  md={6} sm={12} className=" col-lg chooseus-block">
+        <Col  md={6} xs={6} className=" col-lg chooseus-block">
           <div className="chooseus-block-one">
             <div className="inner-box homeInner-box">
               <div className="shape" style={{backgroundImage: `url(${Shape21.src})`}}>

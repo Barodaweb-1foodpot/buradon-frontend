@@ -16,11 +16,11 @@ const Loaction = () => {
           <h2>Our <span className="hightlight-blue">Locations</span></h2>
         </div>
       </Col>
-      <Col lg={8} >
+      <Col lg={8} md={8} >
         <Image src={GlobalGraph} alt="img" />
         <h3 className="map-title">Our Global Identity</h3>
       </Col>
-      <Col lg={4} >
+      <Col lg={4} md={4} >
         <Image src={IndinaMap} alt="img" />
         <h3 className="map-title">Our Clients in India</h3>
       </Col>

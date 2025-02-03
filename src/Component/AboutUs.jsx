@@ -16,7 +16,7 @@ const AboutUsComponent = () => {
       <section className="about-style-three sec-pad">
         <div className="auto-container">
           <Row className=" clearfix">
-            <Col lg={6} md={12} sm={12} className=" image-column">
+            <Col lg={6} md={6} sm={12} className=" image-column">
               <div className="image-box">
                 <div className="shape">
                   <div
@@ -48,7 +48,7 @@ const AboutUsComponent = () => {
                       </div> */}
               </div>
             </Col>
-            <Col lg={6} md={12} sm={12} className=" content-column">
+            <Col lg={6} md={6} sm={12} className=" content-column">
               <div className="content-box">
                 <div className="sec-title">
                   <span className="sub-title">About Company</span>
