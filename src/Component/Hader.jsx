@@ -1,6 +1,6 @@
 "use client";
 
-import { css } from "@emotion/css";
+// import { css } from "@emotion/css";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -186,13 +186,8 @@ const Hader = () => {
                   </li>
                 </ul>
                 <ul
-                  className={
-                    "menu-right-content" +
-                    " " +
-                    css`
-                      padding-left: 2rem;
-                    `
-                  }
+                  className="menu-right-content"
+                  style={{paddingLeft:"2rem"}}
                 >
                   <li className="support-box">
                     <div className="icon-box">
@@ -232,13 +227,8 @@ const Hader = () => {
                   </li>
                 </ul>
                 <ul
-                  className={
-                    "menu-right-content" +
-                    " " +
-                    css`
-                      padding-left: 2rem;
-                    `
-                  }
+                  className="menu-right-content"
+                  style={{paddingLeft:"2rem"}}
                 >
                   <li className="support-box">
                     <div className="icon-box">
@@ -329,11 +319,11 @@ const Hader = () => {
               </div>
               <div className="mobilHader">
                 <Link
-                  className={`${pathname === "/GetQote" ? "active" : ""}`}
-                  href="/GetQote"
+                  className={`${pathname === "/Career" ? "active" : ""}`}
+                  href="/Career"
                 >
                   <RiContactsFill className="mobilHaderIcon" />
-                  Get A Quote
+                  Career
                 </Link>
               </div>
             </div>

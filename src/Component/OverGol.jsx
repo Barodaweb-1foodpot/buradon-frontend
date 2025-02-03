@@ -38,7 +38,7 @@ const OverGol = () => {
                     <figure className="image">
                       <Image src={statment1} alt="img" />
                     </figure>
-                    <div className="icon-box">
+                    <div className="icon-box icon1">
                       <Image src={Icon1} alt="icon" />
                     </div>
                     <div
@@ -56,7 +56,7 @@ const OverGol = () => {
                     <figure className="image">
                       <Image src={Statment2} alt="img" />
                     </figure>
-                    <div className="icon-box">
+                    <div className="icon-box icon2">
                       <Image src={Icon2} alt="img" />
                     </div>
                     <div

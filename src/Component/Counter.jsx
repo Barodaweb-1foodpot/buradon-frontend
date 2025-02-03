@@ -15,9 +15,9 @@ const Counter = () => {
       <section className="funfact-section alternat-2 centred buradon">
         <div className="auto-container">
           <div className="inner-content">
-            <Row className=" clearfix">
+            <Row className=" clearfix" style={{alignItems:"center"}}>
               {/* Customers */}
-              <Col md={6} sm={12} className="col-lg  funfact-block">
+              <Col    xs={6} className="col-lg col-md  funfact-block">
                 <div className="funfact-block-one">
                   <div className="inner-box">
                     <div className="icon-box">
@@ -34,7 +34,7 @@ const Counter = () => {
               </Col>
 
               {/* Countries */}
-              <Col md={6} sm={12} className="col-lg  funfact-block">
+              <Col  xs={6} className="col-lg col-md  funfact-block">
                 <div className="funfact-block-one">
                   <div className="inner-box">
                     <div className="icon-box">
@@ -51,7 +51,7 @@ const Counter = () => {
               </Col>
 
               {/* Employees */}
-              <Col md={6} sm={12} className="col-lg  funfact-block">
+              <Col  xs={6} className="col-lg col-md  funfact-block">
                 <div className="funfact-block-one">
                   <div className="inner-box">
                     <div className="icon-box">
@@ -68,7 +68,7 @@ const Counter = () => {
               </Col>
 
               {/* Products */}
-              <Col md={6} sm={12} className="col-lg  funfact-block">
+              <Col   xs={6} className="col-lg col-md  funfact-block">
                 <div className="funfact-block-one">
                   <div className="inner-box">
                     <div className="icon-box">
@@ -85,7 +85,7 @@ const Counter = () => {
               </Col>
 
               {/* Years of Experience */}
-              <Col md={6} sm={12} className="col-lg  funfact-block">
+              <Col   xs={6} className="col-lg  col-md funfact-block">
                 <div className="funfact-block-one">
                   <div className="inner-box">
                     <div className="icon-box">

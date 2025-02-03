@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="footer-top">
           <div className="auto-container">
             <Row className=" clearfix">
-              <Col lg={4} md={6} sm={12} className=" footer-column">
+              <Col lg={4} md={12} sm={12} className=" footer-column">
                 <div className="footer-logo">
                   <Image
                     src={Logo}
@@ -43,14 +43,14 @@ const Footer = () => {
                   </div>
                 </div>
               </Col>
-              <Col lg={6} md={12} sm={12} className=" footer-column">
+              <Col lg={6} md={8} sm={12} className=" footer-column">
                 <div className="footer-widget contact-widget">
                   <div className="widget-title">
                     <h3>Contact Details</h3>
                   </div>
                   <div className="widget-content">
                     <div className="row clearfix">
-                      <div className="col-lg-6 col-md-6 col-sm-12 single-column">
+                      <Col xs={12} className="col-lg-6 col-md-6  single-column">
                         <div className="single-item">
                           <h3>Location</h3>
                           <p>
@@ -73,8 +73,8 @@ const Footer = () => {
                                           <li><a href="#"><i class="fa-solid fa-basketball"></i></a></li>
                                           <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
                                       </ul> */}
-                      </div>
-                      <div className="col-lg-6 col-md-6 col-sm-12 single-column">
+                      </Col>
+                      <Col xs={12} className="col-lg-6 col-md-6  single-column">
                         <div className="single-item">
                           <h3>Contact Details</h3>
                           <h3>
@@ -91,12 +91,12 @@ const Footer = () => {
                             </a>
                           </h6>
                         </div>
-                      </div>
+                      </Col>
                     </div>
                   </div>
                 </div>
               </Col>
-              <Col lg={2} md={6} sm={12} className=" footer-column">
+              <Col lg={2} md={4} sm={12} className=" footer-column">
                 <div className="footer-widget links-widget">
                   <div className="widget-title">
                     <h3>Useful Links</h3>
