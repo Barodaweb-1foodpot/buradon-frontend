@@ -1,6 +1,5 @@
 "use client";
 
-// import { css } from "@emotion/css";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -52,7 +51,7 @@ const Hader = () => {
         {/* header-top */}
         <div className="header-top-three">
           <div className="auto-container">
-            <div className="top-inner">
+            <div className="top-inner justify-content-center justify-content-lg-between">
               <div className="logo-box">
                 <figure className="logo">
                   <a href="/">
@@ -60,7 +59,7 @@ const Hader = () => {
                   </a>
                 </figure>
               </div>
-              <div className="right-column">
+              <div className="right-column d-none d-lg-flex">
                 <div className="info-box">
                   <div className="icon-box">
                     <HiOutlineLocationMarker className="flaticon-map" />
@@ -187,7 +186,7 @@ const Hader = () => {
                 </ul>
                 <ul
                   className="menu-right-content"
-                  style={{paddingLeft:"2rem"}}
+                  style={{ paddingLeft: "2rem" }}
                 >
                   <li className="support-box">
                     <div className="icon-box">
@@ -228,7 +227,7 @@ const Hader = () => {
                 </ul>
                 <ul
                   className="menu-right-content"
-                  style={{paddingLeft:"2rem"}}
+                  style={{ paddingLeft: "2rem" }}
                 >
                   <li className="support-box">
                     <div className="icon-box">
