@@ -9551,7 +9551,9 @@ div#mCSB_1_container {
   z-index: 1;
   transition: all 500ms ease;
 }
-
+.certificate-block{
+  padding: 20px 0px;
+}
 .statements-block-one .inner-box .image-box .icon-box:before {
   position: absolute;
   content: "";
